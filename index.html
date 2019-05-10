@@ -1,0 +1,340 @@
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+
+<style type="text/css">
+  body {
+    font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+  }
+
+  h1 {
+    font-weight:300;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+  #authors td {
+    padding-bottom:5px;
+    padding-top:30px;
+  }
+</style>
+
+<html>
+<head>
+	<title> VEG </title>
+	<meta property="og:title" content="Visual Entity Graphs for Visual Imitation" />
+</head>
+
+<body>
+	<br>
+          <center>
+          	<span style="font-size:36px"> <b>Visual Entity Graphs for Visual Imitation </b></span>
+		    <br><br>
+<!-- 		    <span style="font-size:24px">ICCV 2019</span>
+		    <br><br> -->
+		  </center>
+		  <table align=center width=800px>
+  			  <tr>
+  	              <td align=center width=100px>
+  					<center>
+              <span style="font-size:18px">Maximilian Sieb<sup>*</sup>, Zhou Xian<sup>*</sup>, Audrey Huang, <a href="https://www.cmu.edu/robotics-institute/iamlab/"> Oliver Kroemer </a>, <a href="https://www.cs.cmu.edu/~katef/"> Katerina Fragkiadaki</a></span>
+	  		  		</center>
+	  		  	  </td>
+              
+	  		  </tr>
+          <tr>
+            <td align=center width=100px>
+            <center>
+              <span style="font-size:18px"><a href="http://www.cs.cmu.edu/">Carnegie Mellon University</a></span>
+              </center>
+              </td>
+          </tr>
+	  	    </table>
+		  <!-- <table align=center width=800px>
+	  			  <tr>
+	  	              <td align=center width=100px>
+	  					<center>
+	  						<span style="font-size:18px"><a href="http://www.cs.cmu.edu/">Maximilian Sieb</a></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align=center width=100px>
+	  					<center>
+	  						<span style="font-size:18px"><a href="http://www.cs.cmu.edu/">Xian Zhou</a></span>
+		  		  		</center>
+		  		  	  </td>
+	  	              <td align=center width=100px>
+	  					<center>
+	  						<span style="font-size:18px"><a href="http://www.cs.cmu.edu/">Audrey Huang</a></span>
+		  		  		</center>
+		  		  	  </td>
+		  		  	  <td align=center width=100px>
+	  					<center>
+	  						<span style="font-size:18px"><a href="http://www.cs.cmu.edu/">Oliver Kroemer</a></span>
+		  		  		</center>
+		  		  	  </td>
+		  		  	  <td align=center width=100px>
+	  					<center>
+	  						<span style="font-size:18px"><a href="http://www.cs.cmu.edu/">Katerina Fragkiadaki</a></span>
+		  		  		</center>
+		  		  	  </td>
+			  </table> -->
+	<br>
+
+  		  <table align=center width=600px>
+  			  <tr>
+            <td width=400px>
+    					<center>
+    	                	<a href="./figures/graph_vis.png"><img src = "./figures/graph_vis.png" width="70%"></img></href></a><br>
+  					  </center>
+            </td>
+          </tr>
+          <tr>
+            <td align=center width=250px>
+            <center>
+              <span style="font-size:14px"> <b>Visual entity graph (VEG) representation of human demonstration and robot imitation</b> for two timesteps of a typical imitation. Corresponding nodes in the human demonstration (top) and robot imitation (bottom) share the same color. Our graphs are hierarchical. Edges exist between object and robot/human hand nodes and point feature nodes, and are added/deleted dynamically over time based on the motion saliency (as shown in the figure with solid/dashed lines).</span>
+              </center>
+              </td>
+          </tr>
+
+
+  		  </table>
+
+      	  <br><br>
+
+		  <hr>
+	<table align=center width=850px>
+	  	<center><h1>Abstract</h1></center>
+			We cast visual imitation as a visual correspondence learning problem. We build upon multi-view self-supervised visual feature learning, synthetic data augmentation, and human finger detectors to learn time-tracked detectors for visual entities of various granularities in the teacher and student environments. We define perceptual similarity to be agreement of the relative spatial arrangements (3D distances) of corresponding visual entities across teacher and learner graphs. We use this perceptual similarity as a re ward function during trajectory optimization. We show the proposed image graph encoding drives successful imitation of a variety of manipulation skills within minutes, using a single demonstration and without any environment instrumentation. It generalizes across background clutter, perturbation of initial conditions, and even across different object instances, and greatly outperforms perceptual similarity functions built over convolutional image embeddings of previous works.
+	  		<br><br>
+			</table>
+
+			<table align=center width=850px>
+  			  <tr>
+            <td width=400px>
+    					<center>
+    	                	<a href="./figures/overview.png"><img src = "./figures/overview.png" width="100%"></img></href></a><br>
+  					  </center>
+            </td>
+          </tr>
+          <tr>
+            <td width=400px>
+            <center>
+            <span style="font-size:14px"><b>We use human hand keypoint detectors, multi-viewpoint feature learning, and synthetic image generation for on-the-fly object detector training from only a few object mask examples. </b>  Using a manually designed mapping between the human hand and the robot, the visual entity detectors can effectively bridge the visual gap between demonstrator and imitator environment, are robust to background clutter, and generalize across different object instances.</span>
+            </center>
+            </td>
+          </tr>
+
+
+  		  </table>
+
+      	  <br><br>
+      <table align=center width=850px>
+          <tr>
+            <td width=400px>
+              <center>
+                        <a href="./figures/tasks2.png"><img src = "./figures/tasks2.png" width="80%"></img></href></a><br>
+              </center>
+            </td>
+          </tr>
+          <tr>
+            <td width=400px>
+            <center>
+            <span style="font-size:14px"><b>Example of the pouring imitation task. </b>Top row shows demonstration, second row shows imitation, and third row shows generalization to a novel object instance. </span>
+            </center>
+            </td>
+          </tr>
+
+
+        </table>
+
+		<hr>
+
+	  <center>
+      <h1>Supplementary Videos</h1>
+    </center>
+      <b>Pushing Task: </b> we train the robot to push the yellow hexagon to purple ring along different trajectories, and show generalization to pushing a different object 
+      <center>
+      <table border="0" align="center" cellspacing="0" cellpadding="20">
+          <td align="center" valign="middle">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/fA2n95TE--M?start=8&end=53" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </td>
+      </table>
+      </center>
+
+      <br>
+
+      <b> Stacking Task: </b> we train the robot to place the yellow hexagon on the purple ring, and show generalization to a different object and different background
+      <center>
+      <table border="0" align="center" cellspacing="0" cellpadding="20">
+          <td align="center" valign="middle">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/fA2n95TE--M?start=53&end=93" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </table>
+      </center>
+
+      <b> Pouring Task: </b> we train the robot to pour liquid from the orange can to mug, and show generalization of this task to a different can using pixel features
+      <center>
+      <table border="0" align="center" cellspacing="0" cellpadding="20">
+          <td align="center" valign="middle">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/fA2n95TE--M?start=93" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </td>
+      </table>
+      </center>
+
+      <br>
+      <hr>
+      <br>
+
+<!--       <center>
+      <table border="0" align="center" cellspacing="0" cellpadding="10" width="1000">
+      <tr>
+      <th> <h2> Pushing Task </h2>   </th>
+      <th>  Stacking Task  </th> 
+      <th> Pouring Task   </th>
+      </tr>
+      <tr>
+      <th> <small>push the yellow hexagon to purple ring along different trajectories, and generalize to a different object </small> </th>
+      <th> <small>place the yellow hexagon on the purple ring, and generalize to both a different object and different background</small>  </th> 
+      <th> <small>pour liquid from the orange can to mug, and generalize to a different can using pixel features </small> </th>
+      </tr>
+    <tr>
+      <td><iframe width="320" height="240" src="https://www.youtube.com/embed/fA2n95TE--M?start=8&end=53" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+      <td><iframe width="320" height="240" src="https://www.youtube.com/embed/fA2n95TE--M?start=53&end=93" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td> 
+      <td><iframe width="320" height="240" src="https://www.youtube.com/embed/fA2n95TE--M?start=93" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+    </tr>
+      </table>
+      </center>
+
+      <br>
+      <hr> -->
+
+
+    <table align=center width=800px>
+	 		<center><h1>Paper</h1></center>
+  			  <tr>
+				  <!-- <td><a href="./figures/timecycle.cvpr.2019.pdf"><img class="layered-paper-big" style="height:175px" src="./figures/paper_shot.jpg"/></a></td>
+				  <td><span style="font-size:14pt">Xiaolong Wang*, Allan Jabri*, Alexei A. Efros.<br>
+				  <i>Learning Correspondence from the Cycle-consistency of Time.</i><br>
+				  In CVPR, 2019 (Oral Presentation).<br>
+				  (hosted on <a href="https://arxiv.org/abs/1903.07593">arXiv</a>)</a>
+          <span style="font-size:4pt"><a href="./figures/timecycle.cvpr.2019.pdf"><br></a>
+				  </span>
+				  </td>
+  	              </td> -->
+  	            Coming soon.
+              </tr>
+  		  </table>
+		  <br>
+		  <hr>
+	<table align=center width=800px>
+	 		<center><h1>Code</h1></center>
+  			  <tr>
+				  <!-- <td><a href="./figures/timecycle.cvpr.2019.pdf"><img class="layered-paper-big" style="height:175px" src="./figures/paper_shot.jpg"/></a></td>
+				  <td><span style="font-size:14pt">Xiaolong Wang*, Allan Jabri*, Alexei A. Efros.<br>
+				  <i>Learning Correspondence from the Cycle-consistency of Time.</i><br>
+				  In CVPR, 2019 (Oral Presentation).<br>
+				  (hosted on <a href="https://arxiv.org/abs/1903.07593">arXiv</a>)</a>
+          <span style="font-size:4pt"><a href="./figures/timecycle.cvpr.2019.pdf"><br></a>
+				  </span>
+				  </td>
+  	              </td> -->
+  	            Coming soon.
+              </tr>
+  		  </table>
+		  <br>
+		  <hr>
+
+</body>
+</html>
