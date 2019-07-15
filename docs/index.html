@@ -114,14 +114,14 @@
 
 <html>
 <head>
-	<title> VEG </title>
-	<meta property="og:title" content="Visual Entity Graphs for Visual Imitation" />
+	<title> Graph-Structured Visual Imitation </title>
+	<meta property="og:title" content="Graph-Structed Visual Imitation" />
 </head>
 
 <body>
 	<br>
           <center>
-          	<span style="font-size:36px"> <b>Visual Entity Graphs for Visual Imitation </b></span>
+          	<span style="font-size:36px"> <b>Graph-Structed Visual Imitation </b></span>
 		    <br><br>
 <!-- 		    <span style="font-size:24px">ICCV 2019</span>
 		    <br><br> -->
@@ -197,8 +197,8 @@
 		  <hr>
 	<table align=center width=850px>
 	  	<center><h1>Abstract</h1></center>
-			We cast visual imitation as a visual correspondence learning problem. We build upon multi-view self-supervised visual feature learning, synthetic data augmentation, and human finger detectors to learn time-tracked detectors for visual entities of various granularities in the teacher and student environments. We define perceptual similarity to be agreement of the relative spatial arrangements (3D distances) of corresponding visual entities across teacher and learner graphs. We use this perceptual similarity as a re ward function during trajectory optimization. We show the proposed image graph encoding drives successful imitation of a variety of manipulation skills within minutes, using a single demonstration and without any environment instrumentation. It generalizes across background clutter, perturbation of initial conditions, and even across different object instances, and greatly outperforms perceptual similarity functions built over convolutional image embeddings of previous works.
-	  		<br><br>
+			We cast visual imitation as a visual correspondence problem. Our robotic agent is rewarded when its actions result in better matching of relative spatial configurations for corresponding visual entities detected in its workspace and teacher's demonstration. We build upon recent advances in Computer Vision,such as human finger keypoint detectors, object detectors trained on-the-fly with synthetic augmentations, and point detectors supervised by viewpoint changes and learn multiple visual entity detectors for each demonstration without human annotations or robot interactions. We empirically show the proposed factorized visual representations of entities and their spatial arrangements drive successful imitation of a variety of manipulation skills within minutes, using a single demonstration and without any environment instrumentation. It is robust to background clutter and can effectively generalize across environment variations between demonstrator and imitator, greatly outperforming unstructured non-factorized full-frame CNN encodings of previous works.
+			<br><br>
 			</table>
 
 			<table align=center width=850px>
@@ -212,7 +212,11 @@
           <tr>
             <td width=400px>
             <center>
-            <span style="font-size:14px"><b>We use human hand keypoint detectors, multi-viewpoint feature learning, and synthetic image generation for on-the-fly object detector training from only a few object mask examples. </b>  Using a manually designed mapping between the human hand and the robot, the visual entity detectors can effectively bridge the visual gap between demonstrator and imitator environment, are robust to background clutter, and generalize across different object instances.</span>
+            <span style="font-size:14px"><b>We use human hand keypoint detectors, multi-viewpoint feature learning, and synthetic image generation for on-the-fly object detector training from only a few object mask examples. </b>  Using a manually designed mapping between the human hand and the robot, the visual 
+		    
+		    
+		    
+		    detectors can effectively bridge the visual gap between demonstrator and imitator environment, are robust to background clutter, and generalize across different object instances.</span>
             </center>
             </td>
           </tr>
@@ -246,33 +250,43 @@
       <h1>Supplementary Videos</h1>
     </center>
       <b>Pushing Task: </b> we train the robot to push the yellow hexagon to purple ring along different trajectories, and show generalization to pushing a different object 
-      <center>
+<!--       <center>
       <table border="0" align="center" cellspacing="0" cellpadding="20">
           <td align="center" valign="middle">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/fA2n95TE--M?start=8&end=53" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube1.com/embed/fA2n95TE--M?start=8&end=53" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </td>
       </table>
       </center>
-
+ -->
+      <br>
       <br>
 
       <b> Stacking Task: </b> we train the robot to place the yellow hexagon on the purple ring, and show generalization to a different object and different background
-      <center>
+      
+      <br>
+      <br>
+
+     <b> Pouring Task: </b> we train the robot to pour liquid from the orange can to mug, and show generalization of this task to a different can using pixel features
+     <br>
+      <br>
+
+	Below is a video of all demonstrated tasks and their successful imitation.
+	<center>
       <table border="0" align="center" cellspacing="0" cellpadding="20">
           <td align="center" valign="middle">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/fA2n95TE--M?start=53&end=93" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/BRqAJbrbuyM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </table>
       </center>
 
-      <b> Pouring Task: </b> we train the robot to pour liquid from the orange can to mug, and show generalization of this task to a different can using pixel features
-      <center>
+
+<!--       <center>
       <table border="0" align="center" cellspacing="0" cellpadding="20">
           <td align="center" valign="middle">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/fA2n95TE--M?start=93" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube1.com/embed/fA2n95TE--M?start=93" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </td>
       </table>
       </center>
-
+ -->
       <br>
       <hr>
       <br>
