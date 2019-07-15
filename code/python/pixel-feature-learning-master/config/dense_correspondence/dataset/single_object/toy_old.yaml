@@ -1,0 +1,12 @@
+logs_root_path: /home/zhouxian/git/pytorch-dense-correspondence/pdc/logs_proto
+object_id: "toy"
+train:
+- "toy1"
+- "toy2"
+- "toy3"
+test:
+- "toy1"
+- "toy2"
+- "toy3"
+evaluation_labeled_data_path: 
+- "code/data_volume/pdc/evaluation_labeled_data/caterpillar_cross_scene_labels.yaml"

@@ -1,0 +1,8 @@
+logs_root_path: /home/zhouxian/git/pytorch-dense-correspondence/pdc/logs_proto
+object_id: "dr_duck"
+train:
+- "dr_duck"
+test:
+- "dr_duck"
+evaluation_labeled_data_path: 
+- "code/data_volume/pdc/evaluation_labeled_data/caterpillar_cross_scene_labels.yaml"

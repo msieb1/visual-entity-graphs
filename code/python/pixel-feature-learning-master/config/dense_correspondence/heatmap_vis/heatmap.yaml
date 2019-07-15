@@ -1,0 +1,20 @@
+norm_diff_threshold: 3
+heatmap_vis_upper_bound: 0.75
+blend_weight_original_image: 0.3
+randomize_images: True
+same_object: True
+different_objects: True
+multiple_object: True # sample from multi object scenes
+networks:
+# - "imagenet"
+# - "cooking_march_6"
+# - "salad_32_backup"
+- "scale"
+
+norm_diff_threshold_dict:
+  hats_consistent_M_background_0.500_3:
+    0.25
+  hats_specific_M_background_2.000_9:
+    0.35
+  shoes_specific_M_background_2.000_6_with_synthetic:
+    0.35

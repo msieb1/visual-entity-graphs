@@ -1,0 +1,11 @@
+evaluation_labeled_data_path: []
+logs_root_path: /home/zhouxian/git/pixel-feature-learning/pdc/logs_proto/cooking_march
+object_id: cheese_03
+test:
+- cheese_03_1
+- cheese_03_2
+- cheese_03_3
+train:
+- cheese_03_1
+- cheese_03_2
+- cheese_03_3

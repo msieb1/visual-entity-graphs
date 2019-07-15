@@ -1,0 +1,11 @@
+evaluation_labeled_data_path: []
+logs_root_path: /home/zhouxian/git/pixel-feature-learning/pdc/logs_proto/cooking_march
+object_id: Tomato
+test:
+- Tomato_1
+- Tomato_2
+- Tomato_3
+train:
+- Tomato_1
+- Tomato_2
+- Tomato_3

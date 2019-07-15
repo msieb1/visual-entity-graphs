@@ -1,0 +1,10 @@
+logs_root_path: /home/zhouxian/git/pixel-feature-learning/pdc/logs_proto
+object_id: "example"
+train:
+- "example_1"
+- "example_2"
+test:
+- "example_1"
+- "example_2"
+evaluation_labeled_data_path: 
+- "code/data_volume/pdc/evaluation_labeled_data/caterpillar_cross_scene_labels.yaml"

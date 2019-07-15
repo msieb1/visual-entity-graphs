@@ -1,0 +1,12 @@
+logs_root_path: /home/zhouxian/git/pixel-feature-learning/pdc/logs_proto/cooking_march
+multi_object_scenes_config_files: []
+single_object_scenes_config_files:
+- Broccoli.yaml
+- cabbage.yaml
+- cheese_01.yaml
+- cheese_03.yaml
+- Cucumber.yaml
+- Cucumber_Slice_convert.yaml
+- Sliced_Cucumber.yaml
+- Tomato.yaml
+- Tomato_Slice_convert.yaml

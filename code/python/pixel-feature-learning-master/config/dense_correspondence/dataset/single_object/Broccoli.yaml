@@ -1,0 +1,11 @@
+evaluation_labeled_data_path: []
+logs_root_path: /home/zhouxian/git/pixel-feature-learning/pdc/logs_proto/cooking_march
+object_id: Broccoli
+test:
+- Broccoli_1
+- Broccoli_2
+- Broccoli_3
+train:
+- Broccoli_1
+- Broccoli_2
+- Broccoli_3

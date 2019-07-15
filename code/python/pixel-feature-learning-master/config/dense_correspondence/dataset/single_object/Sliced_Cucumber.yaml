@@ -1,0 +1,11 @@
+evaluation_labeled_data_path: []
+logs_root_path: /home/zhouxian/git/pixel-feature-learning/pdc/logs_proto/cooking_march
+object_id: Sliced_Cucumber
+test:
+- Sliced_Cucumber_1
+- Sliced_Cucumber_2
+- Sliced_Cucumber_3
+train:
+- Sliced_Cucumber_1
+- Sliced_Cucumber_2
+- Sliced_Cucumber_3

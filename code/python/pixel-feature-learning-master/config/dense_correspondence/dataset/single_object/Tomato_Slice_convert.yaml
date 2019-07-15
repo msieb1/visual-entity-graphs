@@ -1,0 +1,11 @@
+evaluation_labeled_data_path: []
+logs_root_path: /home/zhouxian/git/pixel-feature-learning/pdc/logs_proto/cooking_march
+object_id: Tomato_Slice_convert
+test:
+- Tomato_Slice_convert_1
+- Tomato_Slice_convert_2
+- Tomato_Slice_convert_3
+train:
+- Tomato_Slice_convert_1
+- Tomato_Slice_convert_2
+- Tomato_Slice_convert_3

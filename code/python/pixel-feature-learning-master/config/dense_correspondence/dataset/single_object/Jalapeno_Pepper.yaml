@@ -1,0 +1,11 @@
+evaluation_labeled_data_path: []
+logs_root_path: /home/zhouxian/git/pytorch-dense-correspondence/pdc/logs_proto/cooking
+object_id: Jalapeno_Pepper
+test:
+- Jalapeno_Pepper_1
+- Jalapeno_Pepper_2
+- Jalapeno_Pepper_3
+train:
+- Jalapeno_Pepper_1
+- Jalapeno_Pepper_2
+- Jalapeno_Pepper_3

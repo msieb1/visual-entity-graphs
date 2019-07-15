@@ -1,49 +1,38 @@
-GPS
-======
+# README
 
-This code is a reimplementation of the guided policy search algorithm and LQG-based trajectory optimization, meant to help others understand, reuse, and build upon existing work.
 
-For full documentation, see [rll.berkeley.edu/gps](http://rll.berkeley.edu/gps).
+This code is an implementation of our work *Graph-Structrued Visual Imitation*. The code includes experiments on a real Baxter robot, as well as an extra, but not fully extensive, Pybullet experiment to facilitate use in the simulator environment.
 
-The code base is **a work in progress**. See the [FAQ](http://rll.berkeley.edu/gps/faq.html) for information on planned future additions to the code.
-# gps-lfd
+The policy learning is based on a reimplementation of the guided policy search algorithm and LQG-based trajectory optimization. For full documentation, see [rll.berkeley.edu/gps](http://rll.berkeley.edu/gps). 
 
+As for the object detection, we used code from [here](https://github.com/matterport/Mask_RCNN). This is reflected by using their inference API in our code. In principle, any instance segmentation algorithm can be used by making apropriate changes in the code. 
+
+Code base for pixel-level point feature detection is included here under 'code/python/pixel-feature-learning-master'.
+
+The code base is **a work in progress**. 
 
 ### 1. Setup
 ```
-cd ~/ros_ws && ./baxter.sh
-source ~/virtualenvs/pci_venv/bin/activate
-source ~/git/pixel-feature-learning/config/setup_environment.sh
+source code/python/pixel-feature-learning-master/config/setup_environment.sh
+```
+Installation of required python dependencies is assumed. We use ROS for our Baxter experiments. We also provide a Pybullet interface.
+
+### 2. Running experiments
+
+Experiments are run by creating a corresponding folder in 'code/experiments' with three files: hyperparams.py, config.py, and an agent.py file. One can use existing experiment files as a template to create one's own experiment.
+
+Assuming that the current working directory is the 'code' folder, one can then run the pipeline in the following way:
+
+```
+python python/gps/gps_main.py -experiment pouring_with_grasp_vel_control_lacan
 ```
 
-### 2. Running the main file
+Paths and weight files need to be appropriately specified in the config and hyperparams file. Policy learning parameters are also declared in these files, e.g., episode length, number of iterations per update cycle, and dimension of the state space. For questions referring to the policy learning itself, refer to [rll.berkeley.edu/gps](http://rll.berkeley.edu/gps), on which we have extended our policy learning framework.
+
+The agent.py file declares the required interface of the used environment, e.g., the Baxter robot, PyBullet, Mujoco, or any other platform.
+
+We have provided an experiment without pixel feature level learning for pybullet that can be run via
 
 ```
-python python/gps/gps_main.py -experiment giraffe_pushing_reward_computation
-python python/gps/gps_main.py -experiment reach
-python python/gps/gps_main.py -experiment reach_fingers_mean
+python python/gps/gps_main.py -experiment cube_and_bowl_mrcnn
 ```
-
-
-### Remarks to do on 03/17/2019
-- Tensorflow error with core dumped: 2019-03-17 10:38:21.741202: F ./tensorflow/core/framework/tensor.h:663] Check failed: new_num_elements == NumElements() (11 vs. 7)
-
-in agent_baxter.py:
-- Display End Effector mean on figure (self.fig.gca().scatter somehow doesnt work)
-Look into get_mrcnn_features and how the figure is handled
-- overlay demo images (can be accessed via self._hyperparams['demo_imgs'][t])
-- make a video saver function or somehting
-- investigate cost with ipdb in line 371
-(just run python python/gps/gps_main.py -experiment stacking_yellowhexagon_on_purplering and it will break there )
-
-- also you can change command velocity ('max_velocity' in agent dict)
-
-Good luck!
-
-
-### Parameters to look out for
-- cost weight
-- taskspace delta / max velocity
-- dt (the smaller the better for velocity, higher better for position control)
-- T (the higher the finer the demo is dissected, overall execution time for robot is dt*T)
--

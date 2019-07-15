@@ -1,0 +1,13 @@
+logs_root_path: code/data_volume/pdc/logs_proto
+object_id: "chilli_pepper_on_white_plate_custom_1"
+train:
+- "chilli_pepper_on_white_plate_custom_1_1"
+- "chilli_pepper_on_white_plate_custom_1_2"
+- "chilli_pepper_on_white_plate_custom_1_3"
+test:
+- "chilli_pepper_on_white_plate_custom_1_1"
+- "chilli_pepper_on_white_plate_custom_1_2"
+- "chilli_pepper_on_white_plate_custom_1_3"
+evaluation_labeled_data_path: 
+- "code/data_volume/pdc/evaluation_labeled_data/caterpillar_cross_scene_labels.yaml"
+

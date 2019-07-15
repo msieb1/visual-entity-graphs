@@ -1,0 +1,14 @@
+logs_root_path: /home/zhouxian/git/pytorch-dense-correspondence/pdc/logs_proto
+object_id: "toy"
+train:
+- "destroyer_1"
+- "destroyer_2"
+- "destroyer_3"
+- "destroyer_4"
+test:
+- "destroyer_1"
+- "destroyer_2"
+- "destroyer_3"
+- "destroyer_4"
+evaluation_labeled_data_path: 
+- "code/data_volume/pdc/evaluation_labeled_data/caterpillar_cross_scene_labels.yaml"

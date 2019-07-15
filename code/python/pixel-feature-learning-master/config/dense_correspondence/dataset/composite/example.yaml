@@ -1,0 +1,6 @@
+logs_root_path: /home/zhouxian/git/pixel-feature-learning/pdc/logs_proto
+
+single_object_scenes_config_files:
+- example.yaml
+
+multi_object_scenes_config_files: []

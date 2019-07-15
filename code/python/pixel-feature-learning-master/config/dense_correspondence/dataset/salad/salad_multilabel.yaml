@@ -1,0 +1,8 @@
+trainset_dir: /home/zhouxian/git/pixel-feature-learning/data/salads/TRAIN
+testset_dir: /home/zhouxian/git/pixel-feature-learning/data/salads/VALIDATION
+img_name_format: '*.jpg'
+img_width: 640
+img_height: 480
+
+multilabel_dir: /home/zhouxian/git/pixel-feature-learning/data/scraped_images_old
+CLASS_NAMES: ['croutons', 'cucumber', 'egg', 'lettuce', 'mozarella cheese', 'olives', 'onion', 'parmesan cheese', 'tomato']

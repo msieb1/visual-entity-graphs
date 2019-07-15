@@ -1,0 +1,11 @@
+evaluation_labeled_data_path: []
+logs_root_path: /home/zhouxian/git/pytorch-dense-correspondence/pdc/logs_proto/cooking
+object_id: egg
+test:
+- egg_1
+- egg_2
+- egg_3
+train:
+- egg_1
+- egg_2
+- egg_3

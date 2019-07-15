@@ -1,0 +1,29 @@
+params:
+  num_image_pairs: 25
+  num_matches_per_image_pair: 100
+
+networks:
+  all_3_3:
+    path_to_network_params: code/data_volume/pdc/trained_models/tutorials/all_3_3/003501.pth
+  duck_3:
+    path_to_network_params: /home/zhouxian/git/pytorch-dense-correspondence/pdc/trained_models/tutorials/duck_3/005001.pth
+  duck_robot_3:
+    path_to_network_params: /home/zhouxian/git/pytorch-dense-correspondence/pdc/trained_models/tutorials/duck_robot_3/000501.pth
+  toy_3:
+    path_to_network_params: /home/zhouxian/git/pytorch-dense-correspondence/pdc/trained_models/tutorials/toy_3/004500.pth
+  toy_old_3:
+    path_to_network_params: /home/zhouxian/git/pytorch-dense-correspondence/pdc/trained_models/tutorials/toy_old_3/005500.pth
+  example_3:
+    path_to_network_params: /home/zhouxian/git/pixel-feature-learning/pdc/trained_models/example_3/000000.pth
+  salad_32_backup:
+    path_to_network_params: /home/zhouxian/git/pixel-feature-learning/pdc/trained_models/salad_32_backup_test/050000.pth
+  cooking_march_6:
+    path_to_network_params: /home/zhouxian/git/pixel-feature-learning/pdc/trained_models/cooking_6/037000.pth
+  imagenet:
+    path_to_network_params: /home/zhouxian/git/pixel-feature-learning/pdc/trained_models/salad_pretrained_test/000000.pth
+  scale:
+    path_to_network_params: /home/zhouxian/git/pixel-feature-learning/pdc/trained_models/scale/017500.pth
+
+dataset: [] # which dataset to use, not used for now
+
+output_dir: code/data_volume/pdc/analysis

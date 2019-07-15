@@ -1,0 +1,5 @@
+trainset_dir: /home/zhouxian/git/pixel-feature-learning/data/salads/TRAIN
+testset_dir: /home/zhouxian/git/pixel-feature-learning/data/salads/VALIDATION
+img_name_format: '*.jpg'
+img_width: 640
+img_height: 480

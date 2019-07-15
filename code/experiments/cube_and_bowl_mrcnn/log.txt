@@ -1,0 +1,245 @@
+
+
+exp_name:   my_experiment_10-08-18_10-13
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    7
+
+my_experiment_10-08-18_10-13
+    |          |          condition 0      
+itr | avg_cost |   cost     step   entropy 
+  0 |    19.13 |    19.13     0.30   163.30
+  1 |    19.29 |    19.29     0.15 -2500.80
+  2 |    19.19 |    19.19     0.09 -4999.70
+  3 |    19.18 |    19.18     0.07 -4952.11
+  4 |    19.04 |    19.04     0.07 -4953.60
+  5 |    19.10 |    19.10     0.07 -5078.03
+
+
+exp_name:   my_experiment_10-08-18_10-23
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+my_experiment_10-08-18_10-23
+    |          |          condition 0      
+itr | avg_cost |   cost     step   entropy 
+  0 |    14.80 |    14.80     0.40   -26.70
+
+
+exp_name:   my_experiment_10-08-18_10-26
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+
+
+exp_name:   my_experiment_10-08-18_10-27
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+my_experiment_10-08-18_10-27
+    |          |          condition 0      
+itr | avg_cost |   cost     step   entropy 
+  0 |   670.47 |   670.47     0.40  -283.89
+
+
+exp_name:   my_experiment_10-08-18_10-31
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+my_experiment_10-08-18_10-31
+    |          |          condition 0      
+itr | avg_cost |   cost     step   entropy 
+  0 |   655.36 |   655.36     0.40  -243.27
+  1 |   654.29 |   654.29     0.20 -3324.41
+  2 |   650.66 |   650.66     0.12 -3975.72
+  3 |   649.92 |   649.92     0.09 -4741.79
+  4 |   649.08 |   649.08     0.09 -4736.25
+  5 |   649.22 |   649.22     0.08 -4757.08
+
+
+exp_name:   my_experiment_10-08-18_10-43
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+my_experiment_10-08-18_10-43
+    |          |          condition 0      
+itr | avg_cost |   cost     step   entropy 
+  0 |   664.36 |   664.36     0.40  -243.27
+  1 |   657.17 |   657.17     0.20 -2939.28
+
+
+exp_name:   my_experiment_10-09-18_19-57
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+
+
+exp_name:   my_experiment_10-09-18_19-58
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+
+
+exp_name:   my_experiment_10-09-18_20-04
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+
+
+exp_name:   my_experiment_10-09-18_20-05
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+
+
+exp_name:   my_experiment_10-09-18_20-09
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+
+
+exp_name:   my_experiment_10-09-18_20-10
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+my_experiment_10-09-18_20-10
+    |          |          condition 0      
+itr | avg_cost |   cost     step   entropy 
+  0 |   788.16 |   788.16     0.40  -243.45
+  1 |   792.94 |   792.94     0.20 -1689.44
+
+
+exp_name:   my_experiment_10-09-18_20-17
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+
+
+exp_name:   my_experiment_10-09-18_20-19
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+my_experiment_10-09-18_20-19
+    |          |          condition 0      
+itr | avg_cost |   cost     step   entropy 
+  0 |   787.08 |   787.08     0.40  -139.42
+  1 |   792.59 |   792.59     0.20 -2966.27
+
+
+exp_name:   my_experiment_10-09-18_20-24
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+my_experiment_10-09-18_20-24
+    |          |          condition 0      
+itr | avg_cost |   cost     step   entropy 
+  0 |   785.17 |   785.17     0.40  -139.42
+
+
+exp_name:   my_experiment_10-09-18_20-29
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+
+
+exp_name:   my_experiment_10-09-18_20-30
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+my_experiment_10-09-18_20-30
+    |          |          condition 0      
+itr | avg_cost |   cost     step   entropy 
+  0 |  1026.22 |  1026.22     0.40  -377.24
+  1 |   961.67 |   961.67     0.20 -2795.62
+
+
+exp_name:   my_experiment_10-09-18_20-37
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+
+my_experiment_10-09-18_20-37
+    |          |          condition 0      
+itr | avg_cost |   cost     step   entropy 
+  0 |   776.97 |   776.97     0.40  -243.45
+  1 |   784.32 |   784.32     0.20 -2611.16
+
+
+exp_name:   my_experiment_10-09-18_20-43
+alg_type:   AlgorithmTrajOptPILQR
+alg_dyn:    DynamicsLRPrior
+alg_cost:   CostSum(CostState, CostState)
+iterations: 10
+conditions: 1
+samples:    10
+

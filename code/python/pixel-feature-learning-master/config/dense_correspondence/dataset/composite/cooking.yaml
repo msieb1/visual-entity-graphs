@@ -1,0 +1,10 @@
+logs_root_path: /home/zhouxian/git/pytorch-dense-correspondence/pdc/logs_proto/cooking
+multi_object_scenes_config_files: []
+single_object_scenes_config_files:
+- Broccoli.yaml
+- cabbage.yaml
+- cheese_01.yaml
+- cheese_03.yaml
+- Cucumber.yaml
+- egg.yaml
+- Jalapeno_Pepper.yaml

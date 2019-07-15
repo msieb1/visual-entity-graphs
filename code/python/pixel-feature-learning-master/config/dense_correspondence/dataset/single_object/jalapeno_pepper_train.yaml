@@ -1,0 +1,13 @@
+logs_root_path: /home/zhouxian/git/pytorch-dense-correspondence/pdc/logs_proto
+object_id: "jalapeno_pepper"
+train:
+- "jalapeno_pepper_1"
+- "jalapeno_pepper_2"
+- "jalapeno_pepper_3"
+test:
+- "jalapeno_pepper_1"
+- "jalapeno_pepper_2"
+- "jalapeno_pepper_3"
+evaluation_labeled_data_path: 
+- "code/data_volume/pdc/evaluation_labeled_data/caterpillar_cross_scene_labels.yaml"
+

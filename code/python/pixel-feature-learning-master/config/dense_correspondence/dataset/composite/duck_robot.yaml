@@ -1,0 +1,7 @@
+logs_root_path: /home/zhouxian/git/pytorch-dense-correspondence/pdc/logs_proto
+
+single_object_scenes_config_files:
+- dr_duck.yaml
+- dr_robot.yaml
+
+multi_object_scenes_config_files: []
